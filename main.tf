@@ -5,14 +5,14 @@ provider "aws" {
 resource "aws_instance" "Pipeline_created_Machine" {
   ami                    = "ami-0b45ae66668865cd6"
   instance_type          = "t2.micro"
-  key_name               = "NewAxeCred-2"
+  key_name               = "testkey"
   vpc_security_group_ids = [aws_security_group.allow_ssh.id]
   tags = {
     Name = "Node-Created-By-GitAction"
   }
 }
 
-#Create Security Group for Pipeline_Node (EC2 Instance)
+#Create Security Group for the ec2_Node 
 
 resource "aws_security_group" "allow_ssh" {
   name = "allow_ssh"
