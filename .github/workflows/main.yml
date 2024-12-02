@@ -22,7 +22,7 @@ jobs:
 
       - name: Terraform Init
         
-        run: terraform init #-backend-config="bucket=ennyajax1-bucket" -backend-config="key=env/project7/terraform.tfstate" -backend-config="region=eu-west-2" 
+        run: terraform init  -backend-config="bucket=ennyajax1-bucket" -backend-config="key=env/project7/terraform.tfstate" -backend-config="region=eu-west-2" 
 
       - name: Terraform Plan
         run:  terraform plan
